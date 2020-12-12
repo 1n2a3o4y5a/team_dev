@@ -1,15 +1,7 @@
-FROM python:3.8.1
+FROM node:10.7.0
 
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
-
-RUN mkdir /code
-WORKDIR /code 
-COPY requirements.txt /code
-
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-ADD . /code/
-
-EXPOSE 8000
+WORKDIR /app
+RUN npm install -g @vue/cli
+ADD ./package.json /app/package.json
+RUN npm install
+ADD ./start.sh /app/start.sh
