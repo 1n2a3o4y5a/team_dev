@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  web:
-    build: ./src
+  back:
+    build: ./backend
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./src:/code
@@ -10,6 +10,15 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  front:
+    build:
+      context: ./frontend
+    command: 'sh /app/start.sh'
+    volumes:
+      - ./frontend:/app/:cached
+      - ./frontend/node_modules:/app/node_modules
+    ports:
+      - "8080:8080"
   db:
     image: postgres
     ports: 
@@ -23,4 +32,4 @@ services:
     ports:
       - 1337:80
     depends_on:
-      - web
+      - back

@@ -1,7 +1,7 @@
-FROM node:10.7.0
+FROM node
 
 WORKDIR /app
 RUN npm install -g @vue/cli
-ADD ./package.json /app/package.json
-RUN npm install
-ADD ./start.sh /app/start.sh
+# ADD ./package.json /app/package.json
+# RUN npm install
+# ADD ./start.sh /app/start.sh
