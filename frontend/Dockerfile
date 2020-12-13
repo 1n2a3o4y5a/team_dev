@@ -1,7 +1,10 @@
 FROM node
 
 WORKDIR /app
+COPY ./package.json /app/package.json
 RUN npm install -g @vue/cli
-# ADD ./package.json /app/package.json
-# RUN npm install
-# ADD ./start.sh /app/start.sh
+RUN npm install
+COPY . .
+RUN npm run build
+RUN npm run serve
+EXPOSE 8080
