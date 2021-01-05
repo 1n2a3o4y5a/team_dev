@@ -5,31 +5,31 @@ import uuid
 
 # class MasterRegions:
 #     class Meta:
-#         db_name = 'm_regions'
+#         db_table = 'm_regions'
 #         verbose_name = '地方マスタ'
     
 #     id = models.UUIDField(default=uuid.uuid4, editable=False)
 #     name = models.CharField(verbose_name='地方名')
 
 
-class MasterPrefectures:
+class MasterPrefectures(models.Model):
     class Meta:
-        db_name = 'm_prefectures'
+        db_table = 'm_prefectures'
         verbose_name = '都道府県マスタ'
 
-    prefecture_code = models.UUIDField(default=uuid.uuid4, editable=False)
+    prefecture_code = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     # region_id = models.ForeignKey(MasterRegions, on_delete=models.CASCADE)
     prefecture_name = models.CharField(verbose_name='都道府県名', max_length=20)
     prefecture_name_ruby = models.CharField(verbose_name='都道府県名カナ', max_length=50)
 
     
 
-class MasterCities:
+class MasterCities(models.Model):
     class Meta:
-        db_name = 'm_cities'
+        db_table = 'm_cities'
         verbose_name = '市区町村マスタ'
     
-    city_code = models.UUIDField(default=uuid.uuid4, editable=False)
+    city_code = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     # region_id = models.ForeignKey(MasterRegions, on_delete=models.CASCADE)
     prefecture_code = models.ForeignKey('MasterPrefectures', to_field='prefecture_code', on_delete=models.CASCADE)
     city_name = models.CharField(verbose_name='市区町村名', max_length=20)
@@ -41,7 +41,7 @@ class Shops(models.Model):
         db_table = 'shops'
         verbose_name = 'shops'
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(verbose_name='店名', max_length=50)
     adress_prefecture = models.ForeignKey('MasterPrefectures', to_field='prefecture_code', on_delete=models.CASCADE)
     adress_city = models.ForeignKey('MasterCities', to_field='city_code', on_delete=models.CASCADE)
