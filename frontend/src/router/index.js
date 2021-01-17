@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 // import Home from '../views/Home.vue'
-import MainLayout from '../component/rayout/MainLayout.vue'
+import MainLayout from "../component/rayout/MainLayout.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'mainlayout',
-    component: MainLayout,
+    path: "/",
+    name: "mainlayout",
+    component: MainLayout
     // children: [
     //   {
     //     path: 'shops',
@@ -22,13 +22,13 @@ const routes = [
     //     component: postShopIndex
     //   }
     // ]
-  },
-]
+  }
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;
