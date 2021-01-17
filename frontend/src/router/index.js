@@ -4,7 +4,7 @@ import MainLayout from "@/component/rayout/MainLayout";
 import ShopIndex from "@/component/pages/shop/ShopIndex"
 import PostShopIndex from "@/component/pages/postshop/PostShopIndex"
 import ShopDetailIndex from "@/component/pages/shop/shopdetail/ShopDetailIndex"
-import { component } from "vue/types/umd";
+// import { component } from "vue/types/umd";
 
 
 Vue.use(VueRouter);
