@@ -4,9 +4,9 @@ import uuid
 
 
 
-class MasterPrefectures(models.Model):
+class MasterPrefecture(models.Model):
     class Meta:
-        db_table = 'm_prefectures'
+        db_table = 'm_prefecture'
         verbose_name = '都道府県マスタ'
 
     prefecture_code = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
@@ -15,24 +15,27 @@ class MasterPrefectures(models.Model):
 
     
 
-class MasterCities(models.Model):
+class MasterCity(models.Model):
     class Meta:
-        db_table = 'm_cities'
+        db_table = 'm_city'
         verbose_name = '市区町村マスタ'
     
     city_code = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    prefecture_code = models.ForeignKey('MasterPrefectures', to_field='prefecture_code', on_delete=models.CASCADE)
+    prefecture_code = models.ForeignKey('MasterPrefecture', to_field='prefecture_code', on_delete=models.CASCADE)
     city_name = models.CharField(verbose_name='市区町村名', max_length=20)
     city_name_ruby = models.CharField(verbose_name='市区町村名カナ', max_length=50)
 
 
 class Shops(models.Model):
     class Meta:
-        db_table = 'shops'
-        verbose_name = 'shops'
+        db_table = 'shop'
+        verbose_name = 'shop'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    name = models.CharField(verbose_name='店名', max_length=50)
-    adress_prefecture = models.ForeignKey('MasterPrefectures', to_field='prefecture_code', on_delete=models.CASCADE)
-    adress_city = models.ForeignKey('MasterCities', to_field='city_code', on_delete=models.CASCADE)
-    adress_detail = models.CharField(verbose_name='住所詳細', max_length=50)
+    name = models.CharField(verbose_name='店名', max_length=100)
+    adress_prefecture = models.ForeignKey('MasterPrefecture', to_field='prefecture_code', on_delete=models.CASCADE)
+    adress_city = models.ForeignKey('MasterCity', to_field='city_code', on_delete=models.CASCADE)
+    adress_detail = models.CharField(verbose_name='住所詳細', max_length=100)
+    nearest_station = models.CharField(verbose_name='最寄駅', max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
