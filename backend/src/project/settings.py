@@ -1,7 +1,10 @@
 from pathlib import Path
+try:
+    from .local_settings import *
+except ImportError:
+    pass
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'wc8oy#=74q)0o#a2iaj&v+h&&=0kbvvs0lx1cmu1&v!)o+g3&e'
 
 DEBUG = True
 
