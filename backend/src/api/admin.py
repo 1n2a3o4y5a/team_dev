@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import MasterPrefecture, MasterCity, Shop
+from .models import MasterPrefecture, MasterCity, Shop
 
 class ApiAdmin(admin.ModelAdmin):
     pass
