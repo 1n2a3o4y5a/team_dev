@@ -1,0 +1,378 @@
+[
+{
+    "pk": "1",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "北海道",
+        "prefecture_name_ruby": "ホッカイドウ"
+    }
+}
+,{
+    "pk": "2",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "青森県",
+        "prefecture_name_ruby": "アオモリケン"
+    }
+}
+,{
+    "pk": "3",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "岩手県",
+        "prefecture_name_ruby": "イワテケン"
+    }
+}
+,{
+    "pk": "4",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "宮城県",
+        "prefecture_name_ruby": "ミヤギケン"
+    }
+}
+,{
+    "pk": "5",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "秋田県",
+        "prefecture_name_ruby": "アキタケン"
+    }
+}
+,{
+    "pk": "6",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "山形県",
+        "prefecture_name_ruby": "ヤマガタケン"
+    }
+}
+,{
+    "pk": "7",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "福島県",
+        "prefecture_name_ruby": "フクシマケン"
+    }
+}
+,{
+    "pk": "8",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "茨城県",
+        "prefecture_name_ruby": "イバラキケン"
+    }
+}
+,{
+    "pk": "9",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "栃木県",
+        "prefecture_name_ruby": "トチギケン"
+    }
+}
+,{
+    "pk": "10",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "群馬県",
+        "prefecture_name_ruby": "グンマケン"
+    }
+}
+,{
+    "pk": "11",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "埼玉県",
+        "prefecture_name_ruby": "サイタマケン"
+    }
+}
+,{
+    "pk": "12",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "千葉県",
+        "prefecture_name_ruby": "チバケン"
+    }
+}
+,{
+    "pk": "13",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "東京都",
+        "prefecture_name_ruby": "トウキョウト"
+    }
+}
+,{
+    "pk": "14",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "神奈川県",
+        "prefecture_name_ruby": "カナガワケン"
+    }
+}
+,{
+    "pk": "15",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "新潟県",
+        "prefecture_name_ruby": "ニイガタケン"
+    }
+}
+,{
+    "pk": "16",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "富山県",
+        "prefecture_name_ruby": "トヤマケン"
+    }
+}
+,{
+    "pk": "17",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "石川県",
+        "prefecture_name_ruby": "イシカワケン"
+    }
+}
+,{
+    "pk": "18",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "福井県",
+        "prefecture_name_ruby": "フクイケン"
+    }
+}
+,{
+    "pk": "19",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "山梨県",
+        "prefecture_name_ruby": "ヤマナシケン"
+    }
+}
+,{
+    "pk": "20",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "長野県",
+        "prefecture_name_ruby": "ナガノケン"
+    }
+}
+,{
+    "pk": "21",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "岐阜県",
+        "prefecture_name_ruby": "ギフケン"
+    }
+}
+,{
+    "pk": "22",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "静岡県",
+        "prefecture_name_ruby": "シズオカケン"
+    }
+}
+,{
+    "pk": "23",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "愛知県",
+        "prefecture_name_ruby": "アイチケン"
+    }
+}
+,{
+    "pk": "24",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "三重県",
+        "prefecture_name_ruby": "ミエケン"
+    }
+}
+,{
+    "pk": "25",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "滋賀県",
+        "prefecture_name_ruby": "シガケン"
+    }
+}
+,{
+    "pk": "26",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "京都府",
+        "prefecture_name_ruby": "キョウトフ"
+    }
+}
+,{
+    "pk": "27",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "大阪府",
+        "prefecture_name_ruby": "オオサカフ"
+    }
+}
+,{
+    "pk": "28",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "兵庫県",
+        "prefecture_name_ruby": "ヒョウゴケン"
+    }
+}
+,{
+    "pk": "29",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "奈良県",
+        "prefecture_name_ruby": "ナラケン"
+    }
+}
+,{
+    "pk": "30",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "和歌山県",
+        "prefecture_name_ruby": "ワカヤマケン"
+    }
+}
+,{
+    "pk": "31",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "鳥取県",
+        "prefecture_name_ruby": "トットリケン"
+    }
+}
+,{
+    "pk": "32",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "島根県",
+        "prefecture_name_ruby": "シマネケン"
+    }
+}
+,{
+    "pk": "33",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "岡山県",
+        "prefecture_name_ruby": "オカヤマケン"
+    }
+}
+,{
+    "pk": "34",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "広島県",
+        "prefecture_name_ruby": "ヒロシマケン"
+    }
+}
+,{
+    "pk": "35",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "山口県",
+        "prefecture_name_ruby": "ヤマグチケン"
+    }
+}
+,{
+    "pk": "36",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "徳島県",
+        "prefecture_name_ruby": "トクシマケン"
+    }
+}
+,{
+    "pk": "37",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "香川県",
+        "prefecture_name_ruby": "カガワケン"
+    }
+}
+,{
+    "pk": "38",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "愛媛県",
+        "prefecture_name_ruby": "エヒメケン"
+    }
+}
+,{
+    "pk": "39",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "高知県",
+        "prefecture_name_ruby": "コウチケン"
+    }
+}
+,{
+    "pk": "40",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "福岡県",
+        "prefecture_name_ruby": "フクオカケン"
+    }
+}
+,{
+    "pk": "41",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "佐賀県",
+        "prefecture_name_ruby": "サガケン"
+    }
+}
+,{
+    "pk": "42",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "長崎県",
+        "prefecture_name_ruby": "ナガサキケン"
+    }
+}
+,{
+    "pk": "43",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "熊本県",
+        "prefecture_name_ruby": "クマモトケン"
+    }
+}
+,{
+    "pk": "44",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "大分県",
+        "prefecture_name_ruby": "オオイタケン"
+    }
+}
+,{
+    "pk": "45",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "宮崎県",
+        "prefecture_name_ruby": "ミヤザキケン"
+    }
+}
+,{
+    "pk": "46",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "鹿児島県",
+        "prefecture_name_ruby": "カゴシマケン"
+    }
+}
+,{
+    "pk": "47",
+    "model": "api.MasterPrefecture",
+    "fields": {
+        "prefecture_name": "沖縄県",
+        "prefecture_name_ruby": "オキナワケン"
+    }
+}
+]

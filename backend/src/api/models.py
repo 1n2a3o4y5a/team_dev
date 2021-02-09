@@ -1,41 +1,38 @@
 from django.db import models
 from django.utils import timezone
+import uuid
 
 
-class MasterRegions:
+
+class MasterPrefecture(models.Model):
     class Meta:
-        db_name = 'm_regions'
-        verbose_name = '地方マスタ'
-    
-    id = models.UUIDField(default=uuid.uuid4, editable=False)
-    name = models.CharField(verbose_name='地方名')
+        db_table = 'm_prefecture'
 
+    prefecture_code = models.IntegerField(primary_key=True,editable=False, unique=True)
+    prefecture_name = models.CharField(max_length=20)
+    prefecture_name_ruby = models.CharField(max_length=50)
 
-class MasterPrefectures:
-    class Meta:
-        db_name = 'm_prefectures'
-        verbose_name = '都道府県マスタ'
-
-    id = models.UUIDField(default=uuid.uuid4, editable=False)
-    region_id = models.ForeignKey(MasterRegions, on_delete=models.CASCADE)
-    name = models.CharField(verbose_name='都道府県名')
     
 
-class MasterCities:
+class MasterCity(models.Model):
     class Meta:
-        db_name = 'm_cities'
-        verbose_name = '市区町村マスタ'
+        db_table = 'm_city'
     
-    id = models.UUIDField(default=uuid.uuid4, editable=False)
-    region_id = models.ForeignKey(MasterRegions, on_delete=models.CASCADE)
-    prefecture_id = models.ForeignKey(MasterPrefectures, on_delete=models.CASCADE)
-    name = models.CharField(verbose_name='市区町村名')
+    city_code = models.IntegerField(primary_key=True, editable=False, unique=True)
+    prefecture_code = models.ForeignKey('MasterPrefecture', to_field='prefecture_code', on_delete=models.CASCADE)
+    city_name = models.CharField(max_length=100)
+    city_name_ruby = models.CharField(max_length=100)
 
 
-class Shops(models.Model):
+class Shop(models.Model):
     class Meta:
-        db_table = 'shops'
-        verbose_name = 'shops'
+        db_table = 'shop'
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(verbose_name='店名')
+    id = models.IntegerField(primary_key=True, editable=False, unique=True)
+    name = models.CharField(max_length=100)
+    adress_prefecture = models.ForeignKey('MasterPrefecture', to_field='prefecture_code', on_delete=models.CASCADE)
+    adress_city = models.ForeignKey('MasterCity', to_field='city_code', on_delete=models.CASCADE)
+    adress_detail = models.CharField(max_length=100)
+    nearest_station = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
