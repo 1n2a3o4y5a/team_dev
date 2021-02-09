@@ -14,6 +14,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'api',
+    'user',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,6 +82,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Application definition
+AUTH_USER_MODEL = 'user.User'
 
 
 LANGUAGE_CODE = 'ja'
