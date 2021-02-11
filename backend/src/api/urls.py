@@ -1,11 +1,10 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
 from rest_framework import routers
-from . import serializers
+from . import views
 
-# urlpatterns = [
-#     path('shops/', views.ShopView)
-# ]
 
-router = routers.DefaultRouter()
-router.register(r'shops', views.ShopView)
+
+
+urlpatterns = [
+    path('', views.ShopView.as_view()),
+]
