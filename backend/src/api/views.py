@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
- 
-def index(request):
-    return HttpResponse("Hello, world.")
+from rest_framework import viewsets, filters
+from .models import Shop
+from .serializers import ShopSeriarizer
+
+
+class ShopView(viewsets.ModelViewSet):
+    queryset = Shop.objects.all()
+    serializer_class = ShopSeriarizer
