@@ -1,6 +1,6 @@
 from rest_framework import viewsets, filters, generics
-from .models import Shop, MasterPrefecture, MasterCity
-from .serializers import ShopListSerializer, ShopDetailSerializer, MasterPrefectureSerializer, MasterCitySerializer 
+from .models import Shop, Review, MasterPrefecture, MasterCity
+from .serializers import *
 
 
 class MasterPrefectureApiView(generics.ListCreateAPIView):
@@ -18,3 +18,7 @@ class ShopListApiView(generics.ListCreateAPIView):
 class ShopDetailApiView(generics.RetrieveAPIView):
     queryset = Shop.objects.all()
     serializer_class = ShopDetailSerializer
+
+class ReviewApiView(generics.RetrieveAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
