@@ -1,15 +1,17 @@
-FROM python:3.8.1
+FROM php:7.4-fpm-buster
+SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
 
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV COMPOSER_ALLOW_SUPERUSER=1 \
+  COMPOSER_HOME=/composer
 
-RUN mkdir /code
-WORKDIR /code 
-COPY requirements.txt /code
+COPY --from=composer:1.10 /usr/bin/composer /usr/bin/composer
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN apt-get update && \
+  apt-get -y install git unzip libzip-dev libicu-dev libonig-dev && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
+  docker-php-ext-install intl pdo_mysql zip bcmath
 
-ADD . /code/
+COPY ./php.ini /usr/local/etc/php/php.ini
 
-EXPOSE 8000
+WORKDIR /work
