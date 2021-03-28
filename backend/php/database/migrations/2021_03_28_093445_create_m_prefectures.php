@@ -14,7 +14,7 @@ class CreateMPrefectures extends Migration
     public function up()
     {
         Schema::create('m_prefectures', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->unsignedInteger('id')->primary();
             $table->string('name')->default('');
         });
     }
