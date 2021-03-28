@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMPrefectures extends Migration
+class CreateMCity extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateMPrefectures extends Migration
      */
     public function up()
     {
-        Schema::create('m_prefectures', function (Blueprint $table) {
-            $table->unsignedInteger('id')->primary();
+        Schema::create('m_city', function (Blueprint $table) {
+            $table->bigInteger('city_id')->unsigned()->primary();
+            $table->foreign('prefecture_id')->references('prefecture_id')->on('m_prefecture')->onDelete('cascade');
             $table->string('name')->default('');
         });
     }
@@ -26,6 +27,6 @@ class CreateMPrefectures extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('m_prefectures');
+        Schema::dropIfExists('m_city');
     }
 }
