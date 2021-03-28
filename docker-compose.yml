@@ -23,6 +23,8 @@ services:
     working_dir: /src
   db:
     build: ./mysql
+    ports:
+      - 3306:3306
     volumes:
       - db-store:/var/lib/mysql
 volumes:
