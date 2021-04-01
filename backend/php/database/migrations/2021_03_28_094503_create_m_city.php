@@ -15,6 +15,7 @@ class CreateMCity extends Migration
     {
         Schema::create('m_city', function (Blueprint $table) {
             $table->bigInteger('city_id')->unsigned()->primary();
+            $table->integer('prefecture_id')->unsigned();
             $table->foreign('prefecture_id')->references('prefecture_id')->on('m_prefecture')->onDelete('cascade');
             $table->string('name')->default('');
         });
