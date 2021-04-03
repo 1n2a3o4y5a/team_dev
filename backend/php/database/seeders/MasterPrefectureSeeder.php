@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB; 
 
 class MasterPrefectureSeeder extends Seeder
 {
@@ -65,7 +66,7 @@ class MasterPrefectureSeeder extends Seeder
     {
         $counter = 0;
         foreach ($this->prefectures as $prefecture) {
-            DB::table("prefectures")->insert([
+            DB::table("m_prefecture")->insert([
                 "prefecture_id" => $counter,
                 "name" => $prefecture
             ]);
