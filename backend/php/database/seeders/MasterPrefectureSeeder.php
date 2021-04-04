@@ -64,7 +64,7 @@ class MasterPrefectureSeeder extends Seeder
      */
     public function run()
     {
-        $counter = 0;
+        $counter = 1;
         foreach ($this->prefectures as $prefecture) {
             DB::table("m_prefecture")->insert([
                 "prefecture_id" => $counter,
