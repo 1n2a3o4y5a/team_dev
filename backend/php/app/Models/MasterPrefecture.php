@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class MasterPrefecture extends Model
 {
-    protected $table = 'm_prefecture';    
+    protected $table = 'm_prefecture';
+    protected $fillable = ['prefecture_id', 'name'];
 }

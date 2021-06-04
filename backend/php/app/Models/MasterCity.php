@@ -9,4 +9,5 @@ class MasterCity extends Model
 {
     protected $table = 'm_city';
     public $timestamps = false;
+    protected $fillable = ['city_id', 'name', 'prefecture_id'];
 }
